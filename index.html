@@ -624,26 +624,19 @@ function draw() {
 
 function gameLoop() { update(); draw(); if (!isGameOver && !isPaused) requestAnimationFrame(gameLoop); }
 
+function playGameOverSound() {
+    try {
+        sfxGameOver.currentTime = 0;
+        sfxGameOver.volume = 0.7;
+        sfxGameOver.play();
+    } catch(e) {}
+}
+
 function endGame(isVictory) {
     isGameOver = true;
-
-    // หยุดเพลงบอส
-    bossMusic.pause();
-
-    // เล่นเสียง Game Over เฉพาะตอนแพ้
     if (!isVictory) {
-        playSFX(sfxGameOver);
+    playGameOverSound();
     }
-
-    const t = document.getElementById('game-over-title');
-    t.textContent = isVictory ? "🏆 VICTORY! 🏆" : "GAME OVER";
-    t.style.color = isVictory ? "#00ffcc" : "#ff4444";
-
-    document.getElementById('final-hero-name').textContent = player.name;
-    document.getElementById('final-stage').textContent = stage;
-    document.getElementById('final-score').textContent = score;
-
-    Modals.gameOver.style.display = 'block';
 }
 
 function restartGame() {
