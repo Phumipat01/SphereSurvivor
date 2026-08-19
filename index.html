@@ -162,6 +162,7 @@ canvas{
         <audio id="sfxShoot" src="shoot.wav" preload="auto"></audio>
         <audio id="sfxHit" src="hit.wav" preload="auto"></audio>
         <audio id="sfxLevel" src="levelup.wav" preload="auto"></audio>
+        <audio id="sfxGameOver" src="gameover.wav" preload="auto"></audio>
 
         <div id="exp-wrapper"><div id="exp-bar"></div></div>
         <canvas id="gameCanvas"></canvas><div id="flash"></div>
@@ -242,6 +243,7 @@ const bossMusic=document.getElementById('bossMusic');
 const sfxShoot=document.getElementById('sfxShoot');
 const sfxHit=document.getElementById('sfxHit');
 const sfxLevel=document.getElementById('sfxLevel');
+const sfxGameOver=document.getElementById('sfxGameOver');
 const muteBtn=document.getElementById('mute-btn');
 let isMuted = false;
 function toggleMute() {
@@ -624,12 +626,23 @@ function gameLoop() { update(); draw(); if (!isGameOver && !isPaused) requestAni
 
 function endGame(isVictory) {
     isGameOver = true;
+
+    // หยุดเพลงบอส
+    bossMusic.pause();
+
+    // เล่นเสียง Game Over เฉพาะตอนแพ้
+    if (!isVictory) {
+        playSFX(sfxGameOver);
+    }
+
     const t = document.getElementById('game-over-title');
     t.textContent = isVictory ? "🏆 VICTORY! 🏆" : "GAME OVER";
     t.style.color = isVictory ? "#00ffcc" : "#ff4444";
+
     document.getElementById('final-hero-name').textContent = player.name;
     document.getElementById('final-stage').textContent = stage;
     document.getElementById('final-score').textContent = score;
+
     Modals.gameOver.style.display = 'block';
 }
 
