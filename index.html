@@ -260,8 +260,8 @@ function playSFX(a){try{const c=a.cloneNode();c.volume=0.4;c.play();}catch(e){}}
 function music(boss=false){
     bgm.muted = isMuted;
     bossMusic.muted = isMuted;
- if(boss){bgm.pause();bossMusic.volume=0.20;bossMusic.play().catch(()=>{});}
- else{bossMusic.pause();bgm.volume=0.15;bgm.muted=isMuted;bgm.play().catch(()=>{});}
+ if(boss){bgm.pause();bossMusic.volume=0.55;bossMusic.play().catch(()=>{});}
+ else{bossMusic.pause();bgm.volume=0.35;bgm.muted=isMuted;bgm.play().catch(()=>{});}
 }
 function burst(x,y,color='#fff',n=14){
  for(let i=0;i<n;i++){const ang=Math.random()*6.28,sp=Math.random()*4+1;
@@ -658,7 +658,7 @@ function restartGame() {
     // เริ่ม BGM ใหม่
     if (!isMuted) {
         bgm.muted = false;
-        bgm.volume = 0.15;
+        bgm.volume = 0.35;
         bgm.play().catch(() => {});
     }
 
