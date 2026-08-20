@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/🎮_Play_Game-37a779?style=for-the-badge" />
   </a>
   <a href="[https://youtu.be/VIDEO_ID](https://youtu.be/PThf8OYcn9A)">
-    <img src="https://img.shields.io/badge/▶_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+    <img src="https://img.shields.io/badge/▶_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
   </a>
   <a href="./รายงาน.pdf">
     <img src="https://img.shields.io/badge/📄_PDF_Report-EA4335?style=for-the-badge" />
