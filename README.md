@@ -10,7 +10,7 @@
   <a href="รายงาน.pdf">
     <img src="https://img.shields.io/badge/📄_รายงาน-EA4335?style=for-the-badge" />
   </a>
-  <a href="แบบประเมิน.csv">
+  <a href="แบบประเมินเกม Sphere Survivor.csv">
     <img src="https://img.shields.io/badge/📊_แบบประเมิน-34A853?style=for-the-badge" />
   </a>
 </p>
