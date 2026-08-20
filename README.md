@@ -7,10 +7,10 @@
   <a href="https://www.youtube.com/watch?v=PThf8OYcn9A">
     <img src="https://img.shields.io/badge/▶_วิดีโอ-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
   </a>
-  <a href="รายงาน.pdf">
+  <a href="./รายงาน.pdf">
     <img src="https://img.shields.io/badge/📄_รายงาน-EA4335?style=for-the-badge" />
   </a>
-  <a href="แบบประเมินเกม Sphere Survivor.csv">
+  <a href="./แบบประเมินเกม Sphere Survivor.csv">
     <img src="https://img.shields.io/badge/📊_แบบประเมิน-34A853?style=for-the-badge" />
   </a>
 </p>
